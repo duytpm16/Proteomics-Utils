@@ -10,7 +10,7 @@ library(dplyr)
 
 
 ### Variables to change
-#   Assuming BLAST executable is already installed from ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/.
+#   Need to install BLAST executable from ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/.
 
 #   1.) seq_vec : a vector of sequences
 #   2.) seq_type: 'AA' for amino acids | 'DNA' for ACTG nucleotides
