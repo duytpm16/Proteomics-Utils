@@ -14,7 +14,7 @@ library(dplyr)
 #   2.) seq_type: 'AA' for amino acids | 'DNA' for ACTG nucleotides
 #   3.) db_path : path to blast database and databse name
 #   4.) outfile : filename to save blast results as .rds
-data    <- read.delim("~/Desktop/protein alignment/peptides_DO_islets.txt")
+data <- read.delim("~/Desktop/protein alignment/peptides_DO_islets.txt")
 
 seq_vec  <- data$Sequence
 seq_type <- 'AA'
