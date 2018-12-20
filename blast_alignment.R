@@ -14,7 +14,7 @@ library(dplyr)
 
 #   1.) seq_vec : a vector of sequences
 #   2.) seq_type: 'AA' for amino acids | 'DNA' for ACTG nucleotides
-#   3.) db_path : path to blast database and databse name
+#   3.) db_path : path to blast database and database name
 #   4.) outfile : filename to save blast results as .rds
 data <- read.delim("~/Desktop/protein alignment/peptides_DO_islets.txt")
 
@@ -33,7 +33,7 @@ outfile  <- 'coon_maxquant_pep_blast_to_ref.rds'
 
 
 
-### Setting up local databse, StringSet object, and BLAST program
+### Setting up local database, StringSet object, and BLAST program
 if(seq_type == 'AA'){
   
    blast_db <- blast(db = db_path, type = 'blastp')
