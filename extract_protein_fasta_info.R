@@ -1,5 +1,8 @@
+### Options and libraries
 options(stringsAsFactors = FALSE)
 library(seqinr)
+
+
 
 
 ### Variables to change
