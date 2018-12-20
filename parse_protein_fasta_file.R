@@ -1,13 +1,13 @@
 n <- length(k)
 
 
-protein_df <- data.frame(protein_id = character(length = n),
-                         chromosome = character(length = n),
-                         start      = numeric(length = n),
-                         end        = numeric(length = n),
-                         gene_id    = character(length = n),
+protein_df <- data.frame(protein_id   = character(length = n),
+                         chromosome   = character(length = n),
+                         start        = numeric(length = n),
+                         end          = numeric(length = n),
+                         gene_id      = character(length = n),
                          trascript_id = character(length = n),
-                         gene_symbol = character(length = n))
+                         gene_symbol  = character(length = n))
 
 
 
@@ -26,8 +26,3 @@ for(i in 1:n){
 }
 
 
-
-
-dataset.esc.proteins$annots <- merge(dataset.esc.proteins$annots, protein_df, by = 'protein_id', all.x = TRUE)
-dataset.esc.proteins$annots$start <- dataset.esc.proteins$annots$start / 1e6
-dataset.esc.proteins$annots$end   <- dataset.esc.proteins$annots$end / 1e6
