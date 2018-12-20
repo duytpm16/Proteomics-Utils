@@ -71,7 +71,7 @@ file_name <- paste0(dir_path, file_name)
 
 
 
-### Names for created database
+### Names for database
 db_name <- c("mm.ref.prot",
              "mm.aj.prot",
              "mm.svimj.prot",
