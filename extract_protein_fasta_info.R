@@ -65,6 +65,11 @@ for(i in 1:n){
 
 
 
+
+
+
+
+
 ### Convert positions to Mb if mb == TRUE
 if(mb){
    fasta_file_df$start <- fasta_file_df$start / 1e6
@@ -75,4 +80,5 @@ if(mb){
 
 
 
+### Save as RDS
 saveRDS(fasta_file_df, file = out.file)
