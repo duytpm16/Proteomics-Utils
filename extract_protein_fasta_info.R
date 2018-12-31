@@ -8,7 +8,7 @@ library(seqinr)
 ### Variables to change
 #   1.) fasta.file  : path to protein fasta file. Specifically from http://ftp.ensembl.org/pub/release-90/fasta/. Not sure if other versions contain the same format
 #   2.) mb          : logical value. True - convert numeric positions to Mb  | False - leave positions as is
-#   3.) outfile.name: file name to save results  
+#   3.) outfile.name: file name to save results as .rds
 fasta.file   <- 'Ensembl 90 Proteins/Mus_musculus.GRCm38.pep.all.fa'
 mb           <- TRUE
 outfile.name <- 'reference_protein_info.rds' 
