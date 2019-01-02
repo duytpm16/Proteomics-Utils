@@ -84,4 +84,4 @@ if(mb){
 
 
 ### Save as RDS
-saveRDS(fasta_file_df, file = out.file)
+saveRDS(fasta_file_df, file = outfile.name)
