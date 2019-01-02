@@ -55,7 +55,7 @@ for(i in 1:n){
   
     # Add the info to fasta_file_df
     fasta_file_df$protein_id[i]         <- gsub('>','',info[1])
-    chromosome_position                 <- strsplit(info[grep('chromosome:', info)], split = ':')[[1]]
+    chromosome_position                 <- if(length(info[grep('chromosome:', info)]) != 0) strsplit(info[grep('chromosome:', info)], split = ':')[[1]] else strsplit(info[grep('scaffold:', info)], split = ':')[[1]]
     fasta_file_df$chromosome[i]         <- chromosome_position[3]
     fasta_file_df$start[i]              <- chromosome_position[4]
     fasta_file_df$end[i]                <- chromosome_position[5]
