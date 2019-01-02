@@ -66,8 +66,8 @@ for(i in 1:n){
   
 }
 
-
-
+fasta_file_df$start <- as.numeric(fasta_file_df$start)
+fasta_file_df$end   <- as.numeric(fasta_file_df$end)
 
 
 
