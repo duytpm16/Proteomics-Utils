@@ -64,7 +64,7 @@ for(i in 1:n){
     fasta_file_df$gene_biotype[i]       <- strsplit(info[grep('gene_biotype:', info)], split = ':')[[1]][2]
     fasta_file_df$transcript_biotype[i] <- strsplit(info[grep('transcript_biotype:', info)], split = ':')[[1]][2]
     fasta_file_df$gene_symbol[i]        <- if(length(info[grep('gene_symbol:', info)]) != 0) strsplit(info[grep('gene_symbol:', info)], split = ':')[[1]][2] else NA
-    fasta_file_df$description[i]        <- if(length(info[grep('gene_symbol:', info)]) !=0 ) strsplit(info[grep('description:', info)], split = ':')[[1]][2] else NA
+    fasta_file_df$description[i]        <- if(length(info[grep('description:', info)]) !=0 ) strsplit(info[grep('description:', info)], split = ':')[[1]][2] else NA
   
 }
 
