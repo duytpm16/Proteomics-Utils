@@ -19,7 +19,7 @@ library(dplyr)
 data <- read.delim("~/Desktop/protein alignment/peptides_DO_islets.txt")
 
 seq_vec  <- data$Sequence
-db_type <- 'AA'
+seq_type <- 'AA'
 db_path  <- "~/Desktop/Blast/Mm_pep_blast"
 outfile  <- 'coon_maxquant_pep_blast_to_ref.rds'
 
