@@ -47,24 +47,24 @@ fasta_file_df <- data.frame(protein_id         = character(length = n),
 ### Parsing fasta file begins
 for(i in 1:n){
   
-  # Get header description for a protein
-  info <- strsplit(getAnnot(fasta.file[[i]]), split = ' ')[[1]]
-  info[grep('description:', info)] <- paste(info[grep('description:', info)],
-                                            paste(info[!grepl('[:>]', info) & !grepl('pep', info)], collapse = ' '))
-  
-  
-  # Add the info to fasta_file_df
-  fasta_file_df$protein_id[i]         <- gsub('>','',info[1])
-  chromosome_position                 <- if(length(info[grep('chromosome:', info)]) != 0) strsplit(info[grep('chromosome:', info)], split = ':')[[1]] else strsplit(info[grep('scaffold:', info)], split = ':')[[1]]
-  fasta_file_df$chromosome[i]         <- chromosome_position[3]
-  fasta_file_df$start[i]              <- chromosome_position[4]
-  fasta_file_df$end[i]                <- chromosome_position[5]
-  fasta_file_df$gene_id[i]            <- strsplit(info[grep('gene:', info)], split = ':')[[1]][2]
-  fasta_file_df$transcript_id[i]      <- strsplit(info[grep('transcript:', info)], split = ':')[[1]][2]
-  fasta_file_df$gene_biotype[i]       <- strsplit(info[grep('gene_biotype:', info)], split = ':')[[1]][2]
-  fasta_file_df$transcript_biotype[i] <- strsplit(info[grep('transcript_biotype:', info)], split = ':')[[1]][2]
-  fasta_file_df$gene_symbol[i]        <- if(length(info[grep('gene_symbol:', info)]) != 0) strsplit(info[grep('gene_symbol:', info)], split = ':')[[1]][2] else NA
-  fasta_file_df$description[i]        <- if(length(info[grep('description:', info)]) !=0 ) strsplit(info[grep('description:', info)], split = ':')[[1]][2] else NA
+    # Get header description for a protein
+    info <- strsplit(getAnnot(fasta.file[[i]]), split = ' ')[[1]]
+    info[grep('description:', info)] <- paste(info[grep('description:', info)],
+                                              paste(info[!grepl('[:>]', info) & !grepl('pep', info)], collapse = ' '))
+
+
+    # Add the info to fasta_file_df
+    fasta_file_df$protein_id[i]         <- gsub('>','',info[1])
+    chromosome_position                 <- if(length(info[grep('chromosome:', info)]) != 0) strsplit(info[grep('chromosome:', info)], split = ':')[[1]] else strsplit(info[grep('scaffold:', info)], split = ':')[[1]]
+    fasta_file_df$chromosome[i]         <- chromosome_position[3]
+    fasta_file_df$start[i]              <- chromosome_position[4]
+    fasta_file_df$end[i]                <- chromosome_position[5]
+    fasta_file_df$gene_id[i]            <- strsplit(info[grep('gene:', info)], split = ':')[[1]][2]
+    fasta_file_df$transcript_id[i]      <- strsplit(info[grep('transcript:', info)], split = ':')[[1]][2]
+    fasta_file_df$gene_biotype[i]       <- strsplit(info[grep('gene_biotype:', info)], split = ':')[[1]][2]
+    fasta_file_df$transcript_biotype[i] <- strsplit(info[grep('transcript_biotype:', info)], split = ':')[[1]][2]
+    fasta_file_df$gene_symbol[i]        <- if(length(info[grep('gene_symbol:', info)]) != 0) strsplit(info[grep('gene_symbol:', info)], split = ':')[[1]][2] else NA
+    fasta_file_df$description[i]        <- if(length(info[grep('description:', info)]) !=0 ) strsplit(info[grep('description:', info)], split = ':')[[1]][2] else NA
   
 }
 
