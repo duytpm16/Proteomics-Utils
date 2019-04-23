@@ -14,13 +14,13 @@ library(dplyr)
 
 #   1.) seq_vec : a vector of sequences
 #   2.) seq_type: 'AA' for amino acids | 'DNA' for nucleotides
-#   3.) db_path : path to blast database and database name
+#   3.) db_path : path to blast database and prefix of database name
 #   4.) outfile : filename to save blast results as .rds
 data <- read.delim("~/Desktop/protein alignment/peptides_DO_islets.txt")
 
 seq_vec  <- data$Sequence
 seq_type <- 'AA'
-db_path  <- "~/Desktop/Blast/Mm_pep_blast"
+db_path  <- "~/Desktop/Blast/mm.ref.prot"
 outfile  <- 'coon_maxquant_pep_blast_to_ref.rds'
 
 
