@@ -4,7 +4,7 @@
 #
 #   Note*:
 #       Need to install BLAST executable at ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/. 
-#
+#       Fasta files donwloaded here http://ftp.ensembl.org/pub/release-90/fasta/
 #
 #
 #   Input:
