@@ -1,6 +1,6 @@
 ### Options and library packages
 options(stringsAsFactors = FALSE)
-library(rBLAST)
+library(rBLAST)    # devtools::install_github("mhahsler/rBLAST")
 
 
 
