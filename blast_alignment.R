@@ -82,7 +82,7 @@ for(i in 1:n){
     # Blast for one sequence. Don't care about stats, just want 100% alignment
     bl_results <- predict(object     = blast_db, 
                           newdata    = seq_ss[i,],
-                          BLAST_args = '-comp_based_stats 0')  
+                          BLAST_args = '-comp_based_stats 0 -evalue 1000000')  
     
     
     bl_results <- bl_results %>%
